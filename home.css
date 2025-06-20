@@ -1,0 +1,372 @@
+/* ========================
+   Fonts
+======================== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Segoe+UI:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+/* ========================
+   Base Styles
+======================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #000;
+}
+
+/* ========================
+   Header
+======================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #000c1f;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo img {
+  width: 50px;
+  background-color: #fff;
+  padding: 0.2rem;
+  border-radius: 50%;
+}
+
+#social-icon {
+  width: 2rem;
+  background-color: #ffffff42;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+#social-icon:hover {
+  background-color: #ffffff;
+  color: #000c1f;
+}
+
+/* ========================
+   Navigation
+======================== */
+.nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-family: 'Roboto', sans-serif;
+  background-color: #022b6e79;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+}
+
+.nav a:hover {
+  color: #00aaff;
+  transform: scale(1.05);
+}
+
+/* Hamburger menu (mobile only) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Active hamburger animation */
+.menu-toggle.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active div:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ========================
+   Hero Section
+======================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 50px;
+  background-image: url("images/back image 2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 90vh;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.hero-text p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+/* ========================
+   Button
+======================== */
+.btn {
+  padding: 16px 40px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* ========================
+   Services Section
+======================== */
+.services {
+  padding: 60px 50px;
+  background: #000;
+  color: white;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.service:hover {
+  background: #f0f8ff;
+  color: #000c1f;
+  transform: translateY(-5px);
+}
+
+.service-more {
+  text-decoration: none;
+  color: #000c1f;
+  background-color: #f0f8ff;
+  font-weight: bold;
+}
+
+.service-more:hover {
+  color: #f0f8ff;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+}
+
+/* ========================
+   Testimonials
+======================== */
+.testimonials {
+  padding: 60px 30px;
+  background: linear-gradient(to bottom, #000000, #8e2de2,#000000);
+  color: white;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.testimonial-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: white;
+  color: #333;
+  border-radius: 20px;
+  padding: 30px;
+  flex: 0 0 300px;
+  max-width: 300px;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.testimonial-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.testimonial-card .role {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.testimonial-card .stars {
+  color: #fbc02d;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.testimonial-card .review {
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+
+
+/* ========================
+   Footer
+======================== */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to bottom, black, #000a16);
+}
+
+/* ========================
+   Responsive Styles
+======================== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    flex-direction: column;
+    background-color: #022c6e;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    border-radius: 1rem;
+  }
+
+  .nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .nav {
+    gap: 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,135 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header{
+    background-color: #0077cc;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 2rem 0;
+    text-transform: capitalize;
+    margin: 2rem;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header:hover {
+    background-color: #005fa3;
+    transition: background-color 0.3s ease;
+}
+
+body {
+  background-image: url('images/back\ image\ 1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+  padding: 20px;
+}
+
+/* Layout container */
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  
+}
+
+/* Image section */
+.contact-image img {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Form section */
+.contact-container {
+  flex: 1;
+  min-width: 320px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #ffffff25;
+  backdrop-filter:  blur(0.5rem);
+  padding: 20px;
+  border-top: 0.02rem solid #ffffff;
+  border-left: 0.02rem solid #ffffff;
+}
+
+.contact-container h1 {
+  margin-bottom: 20px;
+  color: #0077cc;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005fa3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-image img {
+    display:none;
+  }
+}
+@media (max-width: 480px) {
+
+  .contact-form button {
+    width: 100%;
+  }
+}
